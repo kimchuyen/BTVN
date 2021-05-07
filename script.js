@@ -14,3 +14,4 @@ document.getElementsByClassName("footer-textarea")[2].innerText="© 2021 One Mou
 // Đổi ảnh đầu tiên thành ảnh onhousing.png
 // Gợi ý: Sử dụng .src
 document.getElementsByTagName("img")[0].src = "img/onhousing.png";
+// note
