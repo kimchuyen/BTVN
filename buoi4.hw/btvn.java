@@ -16,7 +16,7 @@ void dieukienif()
             System.out.println("tháng "+thang+" có 30 ngày");
         }
     else System.out.println ("không phải là tháng");
-    System.out.println("TessttttttttttW");
+   
 }
 void dieukienCase()
 {
