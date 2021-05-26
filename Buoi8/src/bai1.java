@@ -41,18 +41,20 @@ public class bai1 {
         int temp=0;
         int k=1;
         int i=1;
-        int j=y;
+        int j=i+1;
 
             for( i = 0; i<y-1 ; i++)
-                for( j = y-1; j>i ; j--)
+                for( j = i+1; j<y ; j++)
                     if(a[1][j]>a[1][j-1])
                     {
                         temp = a[1][j];
                         a[1][j] = a[1][j-1];
                         a[1][j-1] = temp;
-                        System.out.println(a[1][j]);
-                    }
 
+                    }
+            for (i=0;i<a.length;i++)
+                for (j=0;j<a.length;j++)
+                    System.out.println(a[i][j]);
     }
 
 
