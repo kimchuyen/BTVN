@@ -1,6 +1,7 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.*;
-
+import org.junit.Test;
+import static org.assertj.core.api.Java6Assertions.assertThat;
 public class BT {
     @Test
     @DisplayName("Test 1 ")
@@ -37,6 +38,14 @@ public class BT {
         assertNotSame(ts.tong(4,7),9);
     }
 
+    @Test
+    @DisplayName("Test 5 ")
+     void buoi12()
+    {
+        String [] countries = new String[]{"vietnam", "han quèc"};
+        assertThat(countries).isNotEmpty();
+        assertThat(countries).startsWith("vietnam");
+    }
 
 
 }
