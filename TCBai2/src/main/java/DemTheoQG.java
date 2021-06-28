@@ -68,8 +68,9 @@ public class DemTheoQG{
             {
                 sum= sum+ ps.age;
             }
-            ave=sum / entry.getValue().size();
-            System.out.println(ave) ;
+            ave=sum / entry.getValue().size() *10;
+            ave = (int)ave/10.0;
+            System.out.println( entry.getKey()+":"+ave) ;
         }
 
 
