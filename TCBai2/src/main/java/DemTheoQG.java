@@ -47,21 +47,32 @@ public class DemTheoQG{
     }
     // 1.3. tính trung bình tuổi người theo từng quốc gia
     public void bai3() {
-        HashMap<String, Integer> countPeople = new HashMap();
-        Integer sumage =0;
-        for (Person person : people) {
-            Integer count = countPeople.get(person.nationality);
+        HashMap<String, List<Person>> countPeoplebyCountry = new HashMap();
+
+        people.stream().forEach((person) -> {
+            List<Person> count =  countPeoplebyCountry.get(person.getNationality());
+            List<Person> p1 = new ArrayList<>();
             if (count == null) {
-                sumage = person.age;
-                count=1;
-                countPeople.put(person.nationality, sumage);
+                p1.add(person);
+                countPeoplebyCountry.put(person.getNationality(),p1 );
             } else {
-                sumage = sumage + person.getAge();
-                count=count+1;
-                countPeople.put(person.nationality, (sumage/count));
+                count.add(person);
+                countPeoplebyCountry.put(person.getNationality(), count);
             }
+        });
+        double sum = 0;
+        double ave=0;
+        for(Map.Entry<String,List<Person>> entry : countPeoplebyCountry.entrySet())
+        {
+            for (Person ps: entry.getValue())
+            {
+                sum= sum+ ps.age;
+            }
+            ave=sum / entry.getValue().size();
+            System.out.println(ave) ;
         }
-        System.out.println(countPeople);
+
+
 
     }
     //1.4. đánh giá tuổi mỗi người

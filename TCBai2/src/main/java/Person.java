@@ -8,6 +8,12 @@ public class Person {
     String nationality;
     int age;
 
+    public Person() {
+        String name;
+        String nationality;
+        int age;
+    }
+
     public String getName() {
         return name;
     }
@@ -45,7 +51,4 @@ public class Person {
                 ", age=" + age +
                 '}';
     }
-
-
-
 }
