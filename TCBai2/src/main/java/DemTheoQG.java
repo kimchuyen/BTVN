@@ -60,15 +60,16 @@ public class DemTheoQG{
                 countPeoplebyCountry.put(person.getNationality(), count);
             }
         });
-        double sum = 0;
-        double ave=0;
+
         for(Map.Entry<String,List<Person>> entry : countPeoplebyCountry.entrySet())
         {
+            double sum = 0;
+            double ave=0;
             for (Person ps: entry.getValue())
             {
                 sum= sum+ ps.age;
             }
-            ave=sum / entry.getValue().size() *10;
+           ave=sum / entry.getValue().size() *10;
             ave = (int)ave/10.0;
             System.out.println( entry.getKey()+":"+ave) ;
         }
